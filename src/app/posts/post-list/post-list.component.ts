@@ -3,6 +3,7 @@ import { Post } from '../post.model';
 import { PostService } from '../post.service';
 import { Subscription } from 'rxjs';
 
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -24,7 +25,8 @@ export class PostListComponent implements OnInit, OnDestroy {
   constructor(public postService: PostService) {}
 
   ngOnInit() {
-    this.posts = this.postService.getPosts();
+    // this.posts = this.postService.getPosts();
+    this.postService.getPosts();
     // accept the copy of posts data
     this.postSub = this.postService.getPostUpdatedListener()
               .subscribe((posts: Post[]) => {this.posts = posts; });

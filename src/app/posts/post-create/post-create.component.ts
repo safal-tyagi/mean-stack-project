@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 // import { EventEmitter, Output } from '@angular/core';
-import { Form } from '@angular/forms';
+import { Form, NgForm } from '@angular/forms';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
 
